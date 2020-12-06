@@ -2,9 +2,9 @@
 This is a Go webservice that has 2 endpoints that can encrypt and ecrypt a value received in a JSON Value Key.
 
 ## Requirements
--An Ubuntu Server
--Docker and Docker Compose
--A domain name for the Nginx Server
+- An Ubuntu Server
+- Docker and Docker Compose
+- A domain name for the Nginx Server
 
 ## Installation
 We navigate to the user folder
