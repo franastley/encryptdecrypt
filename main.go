@@ -18,7 +18,7 @@ const (
 
 var (
 	rxBase64 = regexp.MustCompile(Base64) //Regex to detect if string is Base64 check if string is possibly encrypted.
-	bytes := []byte("ABCDEFGHIJKLMNOPQRSQWERW") //We hardcode the key for now however this should be stored somewhere else.
+	keybytes = []byte("ABCDEFGHIJKLMNOPQRSQWERW") //We hardcode the key for now however this should be stored somewhere else.
 )
 
 // IsBase64 check if a string is base64 encoded.
@@ -101,7 +101,7 @@ type value_struct struct {
 //function for our encrypt endpoint
 func encryptvalue(rw http.ResponseWriter, request *http.Request) {
 	
-	key := hex.EncodeToString(bytes) //encode key in bytes to string and keep as secret, put in a vault
+	key := hex.EncodeToString(keybytes) //encode key in bytes to string and keep as secret, put in a vault
 	//decodes the body from request to a json 
 	decoder := json.NewDecoder(request.Body)
 	
@@ -133,7 +133,7 @@ func encryptvalue(rw http.ResponseWriter, request *http.Request) {
 //declare function for out decryption endpoint
 func dencryptvalue(rw http.ResponseWriter, request *http.Request) {
 	
-	key := hex.EncodeToString(bytes) //encode key in bytes to string and keep as secret, put in a vault
+	key := hex.EncodeToString(keybytes) //encode key in bytes to string and keep as secret, put in a vault
 	
 	decoder := json.NewDecoder(request.Body)
 	
