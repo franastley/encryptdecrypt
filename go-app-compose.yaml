@@ -6,5 +6,5 @@ services:
       dockerfile: Dockerfile
       context: .
     environment:
-      - VIRTUAL_HOST=prueba.facturatek.site
-      - LETSENCRYPT_HOST=prueba.facturatek.site
+      - VIRTUAL_HOST=encryptdecrypt.facturatek.site
+      - LETSENCRYPT_HOST=encryptdecrypt.facturatek.site
