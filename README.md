@@ -5,6 +5,7 @@ This is a Go webservice that has 2 endpoints that can encrypt and ecrypt a value
 - An Ubuntu Server
 - Docker and Docker Compose
 - A domain name for the Nginx Server
+- An A DNS record for the host to be used
 
 ## Installation
 We navigate to the user folder
@@ -65,3 +66,20 @@ Request: https://host//decrypt
 Body: {"Value":"950e5cabcc9502fe1885a0b5bbce7abfa7e4604e008e1665933b2effcb4447bf"} 
 
 You should get a test as your response
+
+# Testing
+To run the tests you will need to do the following
+- Install Go on Ubuntu, you can follow the following https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-18-04
+- Install build-essential on Ubuntu:
+```bash
+sudo apt install build-essential
+```
+- run the below to get coverage:
+```bash
+go test --cover
+
+Note: At the moment it has only a 78.1% coverage. 
+
+# Comments
+
+This is live at https://encryptdecrypt.facturatek.site/ it  will stop working on Sunday,  13th of December 2020. 
