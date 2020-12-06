@@ -53,7 +53,7 @@ If you navigate to your host via browser you will be able to see with a SSL Cert
 
 Homepage. You can enjoy our encrypt and decrypt rest api endpoints.
 
-For the endpoints we used PostMan.
+For the endpoints PostMan was used.
 ### Encrypt 
 Request: https://host//encrypt
 Body: {"Value":"test"} 
